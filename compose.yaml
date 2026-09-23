@@ -1,0 +1,13 @@
+services:
+  bot:
+    build: .
+    image: librus-telegram-bot:local
+    env_file: .env
+    environment:
+      TZ: Europe/Warsaw
+    volumes:
+      - librus_state:/data
+    read_only: true
+
+volumes:
+  librus_state:
