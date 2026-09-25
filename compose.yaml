@@ -2,6 +2,8 @@ services:
   bot:
     build: .
     image: librus-telegram-bot:local
+    restart: unless-stopped
+    stop_grace_period: 4m
     env_file: .env
     environment:
       TZ: Europe/Warsaw
