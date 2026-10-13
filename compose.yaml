@@ -1,7 +1,6 @@
 services:
   bot:
-    build: .
-    image: librus-telegram-bot:local
+    image: ghcr.io/denispalchuk/librus-synergia-telegram-bot:latest
     restart: unless-stopped
     stop_grace_period: 4m
     env_file: .env
